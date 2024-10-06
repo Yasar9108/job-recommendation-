@@ -1,0 +1,74 @@
+{% comment %} if You want to add any template Then You Can add here {% endcomment %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>backend</title>
+    <link rel="stylesheet" href="{%static "style.css"%}">
+</head>
+<body>
+    <header>
+        <h1>AI Powered Talent Acquisition Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#user-profile">Create User Profile</a></li>
+                <li><a href="#job-postings">Job Postings</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="user-profile">
+            <h2>Create User Profile</h2>
+            <form id="profileForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+
+                <label for="skills">Skills (comma-separated):</label>
+                <input type="text" id="skills" required>
+
+                <label for="experience_level">Experience Level:</label>
+                <select id="experience_level" required>
+                    <option value="">Select...</option>
+                    <option value="Entry">Entry</option>
+                    <option value="Intermediate">Intermediate</option>
+                    <option value="Expert">Expert</option>
+                </select>
+
+                <label for="desired_roles">Desired Roles (comma-separated):</label>
+                <input type="text" id="desired_roles" required>
+
+                <label for="locations">Locations (comma-separated):</label>
+                <input type="text" id="locations" required>
+
+                <label for="job_type">Job Type:</label>
+                <select id="job_type" required>
+                    <option value="">Select...</option>
+                    <option value="Full-Time">Full-Time</option>
+                    <option value="Part-Time">Part-Time</option>
+                    <option value="Contract">Contract</option>
+                </select>
+
+                <button type="submit">Submit Profile</button>
+            </form>
+        </section>
+        <section id="job-postings">
+            <h2>Job Postings</h2>
+            <div id="jobList">
+                <li>Software Devloper</li>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul class="ul">
+            <li class="iii">For api user Profile <br><p>http://127.0.0.1:8000/api/user/ </p>
+            </li>
+            <hr>
+            <li class="iii">For api jobs Profile <br><p> http://127.0.0.1:8000/api/jobs/ </p></li>
+        </ul>
+    </footer>
+    <script src="{%static "script.js" %}"></script>
+</body>
+</html>
